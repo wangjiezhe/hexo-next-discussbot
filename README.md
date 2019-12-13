@@ -2,6 +2,10 @@
 
 Discussbot comment system for NexT.
 
+## Preview
+
+![image](https://i.loli.net/2019/12/14/8thYSXx9cdWv5L7.png)
+
 ## Install
 
 ```bash
