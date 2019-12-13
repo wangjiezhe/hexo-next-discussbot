@@ -1,4 +1,5 @@
-# Website: https://comments.app/
+# DiscussBot
+# You can get your siteid from https://comments.app/
 # Demo: https://comments.app/view/FLRGs2N1
 discussbot:
     enable: false
