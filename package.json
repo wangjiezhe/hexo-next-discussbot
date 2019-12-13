@@ -1,10 +1,10 @@
 {
     "name": "hexo-next-discussbot",
     "version": "1.0.0",
-    "description": "Discussbot comment system for NexT.",
+    "description": "DiscussBot comment system for NexT.",
     "main": "index.js",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
+      "test": "eslint index.js"
     },
     "repository": {
       "type": "git",
@@ -12,7 +12,8 @@
     },
     "keywords": [
       "Hexo",
-      "NexT"
+      "NexT",
+      "comment"
     ],
     "author": "wangjiezhe <wangjiezhe@gmail.com> (https://wangjiezhe.com)",
     "license": "LGPL-3.0",
@@ -22,5 +23,9 @@
     "homepage": "https://github.com/wangjiezhe/hexo-next-discussbot#readme",
     "dependencies": {
       "next-util": "github:theme-next/next-util"
+    },
+    "devDependencies":{
+        "eslint": "^6.7.2",
+        "eslint-config-theme-next": "^1.1.3"
     }
   }

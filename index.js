@@ -11,7 +11,7 @@ hexo.extend.filter.register('theme_inject', injects => {
   if (!config.enable) return;
 
   if (!config.siteid) {
-    hexo.log.warn(`discussbot.siteid can't be null.`);
+    hexo.log.warn('discussbot.siteid can\'t be null.');
     return;
   }
 
