@@ -2,6 +2,7 @@
 
 ![Theme Version](https://img.shields.io/badge/NexT-v7.3.0+-blue?style=flat-square)
 ![Package Version](https://img.shields.io/github/package-json/v/wangjiezhe/hexo-next-discussbot?style=flat-square)
+![npm](https://img.shields.io/npm/v/hexo-next-discussbot?style=flat-square)
 ![License](https://img.shields.io/github/license/wangjiezhe/hexo-next-discussbot?style=flat-square)
 
 DiscussBot comment system for NexT.
