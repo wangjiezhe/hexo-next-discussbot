@@ -16,7 +16,7 @@ DiscussBot comment system for NexT.
 npm install hexo-next-discussbot
 ```
 
-或者
+or
 
 ```bash
 yarn add hexo-next-discussbot

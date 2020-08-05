@@ -18,7 +18,7 @@ hexo.extend.filter.register('theme_inject', injects => {
   injects.comment.raw('discussbot', `
   {% if page.comments %}
   <div class="comments" id="discussbot-container">
-  <script{{ pjax }} async src="https://comments.app/js/widget.js?2" data-comments-app-website="${config.siteid}" data-limit="${config.number}" data-color="${config.color}" data-dislikes="${config.dislikes}" data-outlined="${config.outlined}"></script>
+  <script{{ pjax }} async src="https://comments.app/js/widget.js?3" data-comments-app-website="${config.siteid}" data-limit="${config.number}" data-color="${config.color}" data-dislikes="${config.dislikes}" data-outlined="${config.outlined}"></script>
   </div>
   {% endif %}
   `);
