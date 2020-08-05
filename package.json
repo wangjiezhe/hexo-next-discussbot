@@ -1,31 +1,31 @@
 {
-    "name": "hexo-next-discussbot",
-    "version": "1.0.1",
-    "description": "DiscussBot comment system for NexT.",
-    "main": "index.js",
-    "scripts": {
-      "test": "eslint index.js"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/wangjiezhe/hexo-next-discussbot.git"
-    },
-    "keywords": [
-      "Hexo",
-      "NexT",
-      "comment"
-    ],
-    "author": "wangjiezhe <wangjiezhe@gmail.com> (https://wangjiezhe.com)",
-    "license": "LGPL-3.0",
-    "bugs": {
-      "url": "https://github.com/wangjiezhe/hexo-next-discussbot/issues"
-    },
-    "homepage": "https://github.com/wangjiezhe/hexo-next-discussbot#readme",
-    "dependencies": {
-      "next-util": "^1.0.0"
-    },
-    "devDependencies":{
-        "eslint": "^6.7.2",
-        "eslint-config-theme-next": "^1.1.3"
-    }
+  "name": "hexo-next-discussbot",
+  "version": "1.0.2",
+  "description": "DiscussBot comment system for NexT.",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangjiezhe/hexo-next-discussbot.git"
+  },
+  "keywords": [
+    "Hexo",
+    "NexT",
+    "comment"
+  ],
+  "author": "wangjiezhe <wangjiezhe@gmail.com> (https://wangjiezhe.com)",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/wangjiezhe/hexo-next-discussbot/issues"
+  },
+  "homepage": "https://github.com/wangjiezhe/hexo-next-discussbot#readme",
+  "dependencies": {
+    "next-util": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-config-theme-next": "^1.1.3"
   }
+}
