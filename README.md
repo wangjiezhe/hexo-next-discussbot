@@ -13,7 +13,13 @@ DiscussBot comment system for NexT.
 ## Install
 
 ```bash
-yarn add wangjiezhe/hexo-next-discussbot
+npm install hexo-next-discussbot
+```
+
+或者
+
+```bash
+yarn add hexo-next-discussbot
 ```
 
 ## Configure
