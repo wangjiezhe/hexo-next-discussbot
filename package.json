@@ -1,6 +1,6 @@
 {
   "name": "hexo-next-discussbot",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "DiscussBot comment system for NexT.",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/wangjiezhe/hexo-next-discussbot#readme",
   "dependencies": {
-    "next-util": "^1.0.0"
+    "@next-theme/utils": "^1.1.0"
   },
   "devDependencies": {
     "eslint": "^7.0.0",
