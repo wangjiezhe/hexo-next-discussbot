@@ -2,7 +2,7 @@
 
 'use strict';
 
-const Util = require('next-util');
+const Util = require('@next-theme/utils');
 const utils = new Util(hexo, __dirname);
 
 hexo.extend.filter.register('theme_inject', injects => {
@@ -16,13 +16,13 @@ hexo.extend.filter.register('theme_inject', injects => {
   }
 
   injects.comment.raw('discussbot', `
-  {% if page.comments %}
-  <div class="comments" id="discussbot-container">
-  <script{{ pjax }} async src="https://comments.app/js/widget.js?3" data-comments-app-website="${config.siteid}" data-limit="${config.number}" data-color="${config.color}" data-dislikes="${config.dislikes}" data-outlined="${config.outlined}"></script>
+  <div class="comments">
+    <div id="discussbot-container"></div>
   </div>
-  {% endif %}
-  `);
+  `, {}, { cache: true });
+
+  injects.bodyEnd.raw('discussbot', utils.getFileContent('discussbot.njk'));
 
   injects.style.push(utils.getFilePath('discussbot.styl'));
 
-}, (hexo.config.discussbot || {}).priority);
+});
