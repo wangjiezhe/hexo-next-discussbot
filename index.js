@@ -7,7 +7,7 @@ const utils = new Util(hexo, __dirname);
 
 hexo.extend.filter.register('theme_inject', injects => {
 
-  let config = utils.defaultConfigFile('discussbot', 'default.yaml');
+  const config = utils.defaultConfigFile('discussbot', 'default.yaml');
   if (!config.enable) return;
 
   if (!config.siteid) {
