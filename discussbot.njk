@@ -1,15 +1,28 @@
-{%- if page.comments %}
+{{ next_data('discussbot', theme.discussbot) }}
 <script>
-NexT.utils.loadComments('#discussbot-container', () => {
-  const script = document.createElement('script');
-  script.src = 'https://comments.app/js/widget.js?3';
-  script.setAttribute('data-comments-app-website', '{{ theme.discussbot.siteid | safedump }}');
-  script.setAttribute('data-limit', '{{ theme.discussbot.number | safedump }}');
-  script.setAttribute('data-color', '{{ theme.discussbot.color | safedump }}');
-  script.setAttribute('dislikes', '{{ theme.discussbot.dislikes | safedump }}');
-  script.setAttribute('outlined', '{{ theme.discussbot.outlined | safedump }}');
-  script.async = true;
-  document.querySelector('#discussbot-container').appendChild(script);
+document.addEventListener('page:loaded', () => {
+  if (!CONFIG.page.comments) return;
+  NexT.utils.loadComments('#discussbot-container').then(() => {
+    const {
+      siteid,
+      number,
+      color,
+      dislikes,
+      outlined
+    } = CONFIG.discussbot;
+    NexT.utils.getScript('https://comments.app/js/widget.js?3', {
+      attributes: {
+        async: true,
+        dataset: {
+          commentsAppWebsite: siteid,
+          limit: number,
+          color
+        },
+        dislikes,
+        outlined
+      },
+      parentNode: document.querySelector('#discussbot-container')
+    });
+  });
 });
 </script>
-{%- endif %}
