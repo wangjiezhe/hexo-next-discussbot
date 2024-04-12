@@ -47,3 +47,8 @@ discussbot:
     # outlined: 0 or 1, use filled icon or outlined icon
     outlined: 0
 ```
+
+## Known issues:
+
+- Not compatible with pjax.
+- Comments are linked to the site url exactly.
