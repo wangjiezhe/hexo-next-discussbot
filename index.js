@@ -10,8 +10,8 @@ hexo.extend.filter.register('theme_inject', injects => {
   const config = utils.defaultConfigFile('discussbot', 'default.yaml');
   if (!config.enable) return;
 
-  if (!config.siteid) {
-    hexo.log.warn('discussbot.siteid can\'t be null.');
+  if (!config.site_id) {
+    hexo.log.warn('discussbot.site_id can\'t be null.');
     return;
   }
 
