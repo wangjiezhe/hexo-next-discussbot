@@ -8,7 +8,6 @@ document.addEventListener('page:loaded', () => {
     .then(() => NexT.utils.getScript('https://comments.app/js/widget.js?3', {
       attributes: {
         async                      : true,
-        crossOrigin                : 'anonymous',
         'data-comments-app-website': CONFIG.discussbot.site_id,
         'data-limit'               : CONFIG.discussbot.number,
         'data-color'               : CONFIG.discussbot.color,
