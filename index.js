@@ -16,13 +16,14 @@ hexo.extend.filter.register('theme_inject', injects => {
   }
 
   injects.comment.raw('discussbot', `
-  <div class="comments">
-    <div id="discussbot-container"></div>
+  {% if page.comments %}
+  <div class="comments discussbot-container">
   </div>
-  `, {}, { cache: true });
+  {% endif %}
+  `);
 
   injects.bodyEnd.raw('discussbot', utils.getFileContent('discussbot.njk'));
 
   injects.style.push(utils.getFilePath('discussbot.styl'));
 
-});
+}, (hexo.config.discussbot || {}).priority);

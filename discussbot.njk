@@ -1,15 +1,23 @@
-{%- if page.comments %}
+{{ next_data('discussbot', config.discussbot) }}
+
 <script>
-NexT.utils.loadComments('#discussbot-container', () => {
-  const script = document.createElement('script');
-  script.src = 'https://comments.app/js/widget.js?3';
-  script.setAttribute('data-comments-app-website', '{{ theme.discussbot.siteid | safedump }}');
-  script.setAttribute('data-limit', '{{ theme.discussbot.number | safedump }}');
-  script.setAttribute('data-color', '{{ theme.discussbot.color | safedump }}');
-  script.setAttribute('dislikes', '{{ theme.discussbot.dislikes | safedump }}');
-  script.setAttribute('outlined', '{{ theme.discussbot.outlined | safedump }}');
-  script.async = true;
-  document.querySelector('#discussbot-container').appendChild(script);
+document.addEventListener('page:loaded', () => {
+  if (!CONFIG.page.comments) return;
+
+  NexT.utils.loadComments('.discussbot-container')
+    .then(() => NexT.utils.getScript('https://comments.app/js/widget.js?3', {
+      attributes: {
+        async                      : true,
+        crossOrigin                : 'anonymous',
+        'data-comments-app-website': CONFIG.discussbot.site_id,
+        'data-limit'               : CONFIG.discussbot.number,
+        'data-color'               : CONFIG.discussbot.color,
+        'data-colorful'            : CONFIG.discussbot.colorful,
+        'data-dark'                : CONFIG.discussbot.dark,
+        'dislikes'                 : CONFIG.discussbot.dislikes,
+        'outlined'                 : CONFIG.discussbot.outlined
+      },
+      parentNode: document.querySelector('.discussbot-container')
+    }));
 });
 </script>
-{%- endif %}

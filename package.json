@@ -4,7 +4,7 @@
   "description": "DiscussBot comment system for NexT.",
   "main": "index.js",
   "scripts": {
-    "test": "eslint index.js"
+    "eslint": "eslint index.js"
   },
   "repository": {
     "type": "git",
@@ -22,10 +22,10 @@
   },
   "homepage": "https://github.com/wangjiezhe/hexo-next-discussbot#readme",
   "dependencies": {
-    "@next-theme/utils": "^1.1.0"
+    "@next-theme/utils": "^1.3.0"
   },
   "devDependencies": {
-    "eslint": "^8.0.0",
-    "eslint-config-theme-next": "^1.1.3"
+    "@next-theme/eslint-config": "0.0.3",
+    "eslint": "^8.0.0"
   }
 }

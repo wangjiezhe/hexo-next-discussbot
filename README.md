@@ -1,6 +1,6 @@
 # Hexo NexT DiscussBot
 
-![Theme Version](https://img.shields.io/badge/NexT-v7.3.0+-blue?style=flat-square)
+![Theme Version](https://img.shields.io/badge/NexT-v8.4.0+-blue?style=flat-square)
 ![Package Version](https://img.shields.io/github/package-json/v/wangjiezhe/hexo-next-discussbot?style=flat-square)
 ![npm](https://img.shields.io/npm/v/hexo-next-discussbot?style=flat-square)
 ![License](https://img.shields.io/github/license/wangjiezhe/hexo-next-discussbot?style=flat-square)
@@ -33,11 +33,15 @@ You can config those in both **hexo** or **theme** `_config.yml`
 # Demo: https://comments.app/view/FLRGs2N1
 discussbot:
     enable: false
-    siteid: # get from comments.app
+    site_id: # get from comments.app
     # number: comments showed per page
     number: 5
     # color: use HEX number for accent color
     color: 3DA0F0
+    # colorful: 0 or 1, use different colors for names
+    colorful: 0
+    # dark: 0 or 1, use dark theme
+    dark: 0
     # dislike: 0 or 1, show only likes, or show both like and dislikes
     dislikes: 0
     # outlined: 0 or 1, use filled icon or outlined icon
