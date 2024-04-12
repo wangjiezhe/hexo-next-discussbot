@@ -1,6 +1,6 @@
 {
   "name": "hexo-next-discussbot",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "DiscussBot comment system for NexT.",
   "main": "index.js",
   "scripts": {
